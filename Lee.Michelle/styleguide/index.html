@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide</title>
+
+<link rel="stylesheet" href="../lib/css/styleguide_test.css">
+<link rel="stylesheet" href="../css/storetheme.css">
+<link rel="stylesheet" href="../lib/css/gridsystem.css">
+<link rel="stylesheet" href="https://use.typekit.net/usv1nxi.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+	<div class="container display-flex">
+		<div class="flex-none">
+			<h1>Styleguide</h1>
+		</div>
+	<div class="flex-stretch"></div>
+	<nav class="flex-none nav">
+		<ul class="container display-flex">
+			<li><a href="#tableofcontents">Table of Contents</a></li>
+		</ul>
+	</nav>
+</div>
+</header>
+
+<div class="container" id="tableofcontents">
+	<div class="card soft">
+		<h2>Table of Contents</h2>
+		<nav class="nav">
+		<ul>
+				<li><a href="#typography">Typography</a></li>
+			<ul>
+				<li><a href="#headings">Headings</a></li>
+				<li><a href="#paragraphs">Paragraphs</a></li>
+			</ul>
+	<li><a href="#cards">Cards</a></li>
+	<li><a href="#viewwindow">View Window</a></li>
+	<li><a href="#navigation">Navigation</a></li>
+	<li><a href="#gridsystem">Grid System</a></li>
+	<li><a href="#flexsystem">Flex System</a></li>
+		</ul>
+		</nav>
+	</div>
+</div>
+
+<div class="container" id="typography">
+	<div class="card soft" id="headings">
+		<h2>Typography</h2>
+		<h1>Header 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<h6>Heading 6</h6>
+	</div>
+<div class="card soft" id="paragraphs">
+	<h3>Paragraphs</h3>
+	
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere saepe sint facilis, porro consequuntur debitis, aliquam natus ea repellendus nihil sit velit dicta, beatae? Exercitationem quibusdam, tenetur unde. Aliquid, earum?</p>
+		<p>Maxime, consequatur maiores praesentium beatae reiciendis, molestiae. Eaque, porro. Quam exercitationem saepe rerum ut laboriosam, in officiis asperiores, quidem voluptates nulla, ratione, assumenda at eius magni. Illo atque officia animi!</p>
+		<p>Quisquam iure officia amet, possimus iusto sint itaque enim laboriosam mollitia perferendis, totam eum doloribus, reiciendis natus unde. Id delectus inventore magnam ad exercitationem corrupti soluta eius, optio, nihil praesentium.</p>
+	</div>
+</div>
+
+<div class="container" id="cards">
+  <h2>Cards</h2>
+
+  <div class="grid">
+    <div class="col-xs-12 col-md-4">
+      <div class="card">Card</div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="card soft">Card Soft</div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="card hard">Card Hard</div>
+    </div>
+
+    <div class="col-xs-12 col-md-4">
+      <div class="card flat">Card Flat</div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="card dark">Card Dark</div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="card medium">Card Medium</div>
+    </div>
+  </div>
+
+<h3>Color Palette</h3>
+<div class="grid gap">
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#FBFAFB;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#B5ACAF;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#645557;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#f8f3ef;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#E3D7C8;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#a5937e;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#eee9e8;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#ccbcbb;"></div>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <div class="color-box" style="background-color:#8d7777;"></div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container" id="viewwindow">
+  <h2>View Window</h2>
+  </div>
+
+<div class="container" id="navigation">
+  <h2>Navigations</h2>
+
+  <script>
+  	const makeNav = (classes='') => {
+  		const links =  ['Home','About','Products','Cart'];
+  		let ran = Math.floor(Math.random()*links.length);
+  		document.write(`
+  		<div>
+			    <nav class="${classes}">
+			      <ul>
+  					${links.reduce((r,o,i)=>{
+  						return r+`<li class=${ran==i?'active':''}><a href="#">${o}</a></li>`;
+  						},'')}
+			         
+			      </ul>
+			    </nav>
+			  </div>
+  		`);
+  	}
+  </script>
+
+	<div class="card soft">
+		<h2>Basic Nav</h2>
+
+		<script>makeNav('nav')</script>
+		</div>
+
+	<div class="card soft">
+		<h2>Flex Nav</h2>
+		
+		<script>makeNav('nav nav-flex')</script>
+		</nav>
+	</div>
+
+		<div class="card soft">
+		<h2>Stretch Nav</h2>
+
+		<script>makeNav('nav nav-stretch')</script>
+	</div>
+
+		<div class="card soft">
+		<h2>Pills Nav</h2>
+
+		<script>makeNav('nav nav-pills')</script>
+	</div>
+	
+		<div class="card soft">
+		<h2>Crumbs Nav</h2>
+
+		<script>makeNav('nav nav-crumbs')</script>
+	</div>
+
+	
+		<div class="card soft">
+		<h2>Material Nav</h2>
+
+		<script>makeNav('nav nav-material')</script>
+	</div>
+  </div>
+
+  <script>
+$(".nav:not(#tableofcontents .nav) a").on("click", function(e){
+		e.preventDefault();
+		$(this).closest("li").addClass("active")
+		  .siblings().removeClass("active");
+	})
+</script>
+
+
+
+<div class="container" id="gridsystem">
+  <h2>Grid System</h2>
+  <div class="grid gap xs-small md-medium">
+	  <div class="col-xs-6 col-md-3">
+      <div class="card soft">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="card soft">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="card soft">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="card soft">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
+      </div>
+  </div>
+  </div>
+
+<h2 id="figures"> Figures</h2>
+
+  <div class="card soft">
+	<h3>Basic Figure</h3>
+
+	<figure class="figure">
+		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
+		  <figcaption>Product #1</figcaption>
+	</figure>
+
+	</div>
+
+	<h3>Figure Grid</h3>
+
+	<div class="grid gap">
+		<div class="col-xs-12 col-md-4">
+	<figure class="figure">
+		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+	<figure class="figure">
+		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
+		</div>
+		
+		<div class="col-xs-12 col-md-4">
+	<figure class="figure">
+		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
+		</div>
+	</div>
+
+	<h3>Product Grid</h3>
+	<div class="grid gap">
+		<div class="col-xs-12 col-md-4">
+	<figure class="figure">
+		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
+		 <figcaption>
+			<div>Product name</div>
+				  <div>$80.00</div>
+		</figcaption> 
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+	<figure class="figure">
+		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
+		 <figcaption>
+			<div>Product name</div>
+				  <div>$80.00</div>
+		</figcaption> 
+		</div>
+		
+		<div class="col-xs-12 col-md-4">
+	<figure class="figure">
+		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
+		 <figcaption>
+			<div>Product name</div>
+				  <div>$80.00</div>
+		</figcaption> 
+		</div>
+	</div>
+
+<h3>Product Overlay </h3>
+<div class="grid gap">
+<div class="col-xs-12 col-md-4">
+    <figure class="figure product-overlay">
+  <img src="https://placehold.co/500x500?text=Product&?font=lato" alt="">
+     <figcaption>
+        <figcaption>
+		<div class="caption-body">
+        <div>Product Name</div>
+        <div>$3.99</div>
+		</div>
+      </figcaption>
+    </figure>
+  </div>
+ <div class="col-xs-12 col-md-4">
+    <figure class="figure product-overlay">
+  <img src="https://placehold.co/500x500?text=Product&?font=lato" alt="">
+     <figcaption>
+        <figcaption>
+		<div class="caption-body">
+        <div>Product Name</div>
+        <div>$3.99</div>
+		</div>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <figure class="figure product-overlay">
+  <img src="https://placehold.co/500x500?text=Product&?font=lato" alt="">
+     <figcaption>
+        <figcaption>
+		<div class="caption-body">
+        <div>Product Name</div>
+        <div>$3.99</div>
+		</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+ <div class="container" id="flexsystem">
+  <h2>Flex System</h2>
+ </div>
+
+  <body>
+</html>
