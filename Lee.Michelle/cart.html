@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearlesque Jewelry</title>
+
+<link rel="stylesheet" href="../lib/css/styleguide_test.css">
+<link rel="stylesheet" href="../css/storetheme.css">
+<link rel="stylesheet" href="../lib/css/gridsystem.css">
+<link rel="stylesheet" href="https://use.typekit.net/usv1nxi.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<header class="navbar">
+  <div class="container display-flex flex-align-center">
+    <div class="flex-none">
+      <h1>Pearlesque Jewelry</h1>
+    </div>
+    <div class="flex-stretch"></div>
+    <nav class="flex-none nav nav-pills">
+      <ul class="container display-flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#article4">Cart</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<script>
+  	const makeNav = (classes='') => {
+  		const links =  ['Home','About','Products','Cart'];
+  		let ran = Math.floor(Math.random()*links.length);
+  		document.write(`
+  		<div>
+			    <nav class="${classes}">
+			      <ul>
+  					${links.reduce((r,o,i)=>{
+  						return r+`<li class=${ran==i?'active':''}><a href="#">${o}</a></li>`;
+  						},'')}
+			         
+			      </ul>
+			    </nav>
+			  </div>
+  		`);
+  	}
+  </script>
+
+
+  <script>
+$(".nav:not(#tableofcontents .nav) a").on("click", function(e){
+		e.preventDefault();
+		$(this).closest("li").addClass("active")
+		  .siblings().removeClass("active");
+	})
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

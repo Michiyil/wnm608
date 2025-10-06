@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Style Guide</title>
 
-<link rel="stylesheet" href="../lib/css/styleguide_test.css">
+<link rel="stylesheet" href="../lib/css/styleguide.css">
 <link rel="stylesheet" href="../css/storetheme.css">
 <link rel="stylesheet" href="../lib/css/gridsystem.css">
 <link rel="stylesheet" href="https://use.typekit.net/usv1nxi.css">
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
@@ -32,19 +31,22 @@
 
 <div class="container" id="tableofcontents">
 	<div class="card soft">
-		<h2>Table of Contents</h2>
+		<h1>Table of Contents</h1>
 		<nav class="nav">
 		<ul>
 				<li><a href="#typography">Typography</a></li>
-			<ul>
 				<li><a href="#headings">Headings</a></li>
 				<li><a href="#paragraphs">Paragraphs</a></li>
-			</ul>
 	<li><a href="#cards">Cards</a></li>
 	<li><a href="#viewwindow">View Window</a></li>
 	<li><a href="#navigation">Navigation</a></li>
 	<li><a href="#gridsystem">Grid System</a></li>
+  <li><a href="#figures">Figures</a></li>
 	<li><a href="#flexsystem">Flex System</a></li>
+	<li><a href="#forms">Forms</a></li>
+	<li><a href="#buttons">Buttons</a></li>
+  <li><a href="#hotdog">Hotdog</a></li>
+  <li><a href="#checkboxes">Checkboxes</a></li>
 		</ul>
 		</nav>
 	</div>
@@ -113,11 +115,11 @@
   </div>
 
   <div class="col-xs-12 col-md-4">
-    <div class="color-box" style="background-color:#E3D7C8;"></div>
+    <div class="color-box" style="background-color:#dcd5cc;"></div>
   </div>
 
   <div class="col-xs-12 col-md-4">
-    <div class="color-box" style="background-color:#a5937e;"></div>
+    <div class="color-box" style="background-color:#a99f94;"></div>
   </div>
 
   <div class="col-xs-12 col-md-4">
@@ -132,11 +134,6 @@
     <div class="color-box" style="background-color:#8d7777;"></div>
   </div>
 </div>
-
-
-
-
-
 
 <div class="container" id="viewwindow">
   <h2>View Window</h2>
@@ -204,39 +201,54 @@
   </div>
 
   <script>
-$(".nav:not(#tableofcontents .nav) a").on("click", function(e){
-		e.preventDefault();
-		$(this).closest("li").addClass("active")
-		  .siblings().removeClass("active");
-	})
+<script>
+$(".nav").not(".navbar .nav, #tableofcontents .nav").find("a").on("click", function(e){
+  e.preventDefault();
+  $(this).closest("li").addClass("active")
+    .siblings().removeClass("active");
+});
 </script>
-
 
 
 <div class="container" id="gridsystem">
   <h2>Grid System</h2>
+
   <div class="grid gap xs-small md-medium">
-	  <div class="col-xs-6 col-md-3">
-      <div class="card soft">
-        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
-      </div>
-    </div>
+    
     <div class="col-xs-6 col-md-3">
       <div class="card soft">
-        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" 
+             alt="Product Sample" 
+             class="media-image">
       </div>
     </div>
+
     <div class="col-xs-6 col-md-3">
       <div class="card soft">
-        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" 
+             alt="Product Sample" 
+             class="media-image">
       </div>
     </div>
+
     <div class="col-xs-6 col-md-3">
       <div class="card soft">
-        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="" class="media-image">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" 
+             alt="Product Sample" 
+             class="media-image">
       </div>
+    </div>
+
+    <div class="col-xs-6 col-md-3">
+      <div class="card soft">
+        <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" 
+             alt="Product Sample" 
+             class="media-image">
+      </div>
+    </div>
+
   </div>
-  </div>
+</div>
 
 <h2 id="figures"> Figures</h2>
 
@@ -247,7 +259,6 @@ $(".nav:not(#tableofcontents .nav) a").on("click", function(e){
 		  <img src="https://placehold.co/500x500?text=Product%20Sample&font=Lato" alt="">
 		  <figcaption>Product #1</figcaption>
 	</figure>
-
 	</div>
 
 	<h3>Figure Grid</h3>
@@ -342,6 +353,196 @@ $(".nav:not(#tableofcontents .nav) a").on("click", function(e){
  <div class="container" id="flexsystem">
   <h2>Flex System</h2>
  </div>
+
+<div class="container" id="forms">
+	<h2>Forms</h2> 
+
+	<div class="card soft">
+		<h3>Default Inputs</h3>
+		<form>
+			<input type="text"> <br>
+			<input type="number"> <br>
+			<input type="password"> <br>
+			<input type="url"> <br>
+			<input type="email"> <br>
+			<input type="datetime-local"> <br>
+			<input type="date"> <br>
+			<input type="search">
+		</form>
+
+	<h3>Form Input</h3>
+		<form>
+			<input type="text" placeholder="Text" class="form-input">
+			<input type="number" placeholder="Number" class="form-input">
+			<input type="password" placeholder="Password" class="form-input">
+			<input type="search" placeholder="Search" class="form-input">
+		</form>
+
+
+<h3>Form Control</h3>
+<form>
+  <div class="form-control">
+    <label class="form-label">Example</label>
+    <input type="text" placeholder="Text" class="form-input">
+  </div>
+  <div class="form-control">
+    <label class="form-label">Example</label>
+    <input type="number" placeholder="Number" class="form-input">
+  </div>
+  <div class="form-control">
+    <label class="form-label">Example</label>
+    <input type="password" placeholder="Password" class="form-input">
+  </div>
+  <div class="form-control display-flex flex-align-center">
+    <div class="flex-none">
+      <label class="form-label">Example</label>
+    </div>
+    <div class="flex-stretch">
+      <input type="search" placeholder="Search" class="form-input">
+    </div>
+    <div class="flex-none">
+      <label class="form-label">Example</label>
+    </div>
+    <div class="flex-stretch">
+      <input type="search" placeholder="Search" class="form-input">
+    </div>
+  </div>
+</form>
+  </div>
+
+     <h2>Buttons</h2>
+  <div class="card soft" id="buttons">
+	<h3>Default Buttons</h3>
+
+	<button>Button</button>
+
+  	<h3>Store Buttons</h3>
+
+  <div class="pill-button-container">
+  <a href="#" class="pill-button">Browse more products</a>
+  </div>
+
+	<h3>Form Buttons</h3>
+
+	<div class="form-control">
+	<button type="button" class="form-button">Button</button>
+	</div>
+	<div class="form-control">
+	<input type="button" class="form-button" value= "Input">
+	</div>
+	<div class="form-control">
+	<a href="#" class="form-button">Anchor</a>
+	</div>
+	</div>
+
+
+  <div class= "card soft container">
+    <h2>Alerts</h2>
+<div class="alert info">
+  <span>💎</span> This is an informational message about your jewelry order.
+</div>
+
+<div class="alert success">
+  <span>✨</span> Your payment was successful! Your jewelry is being prepared.
+</div>
+
+<div class="alert warning">
+  <span>⚠️</span> Please check your details before confirming your order.
+</div>
+
+<div class="alert error">
+  <span>❌</span> We couldn’t complete your purchase. Please try again
+</div>
+</div>
+
+
+	<h2>Hotdog </h2>	
+<div class="card soft" id="hotdog">
+  <div class="form-control">
+    <form>
+      <input type="search" class="hotdog" placeholder="Search">
+    </form>
+  </div>
+  <div class="form-control">
+    <form>
+      <input type="search" class="hotdog dark" placeholder="Search">
+    </form>
+  </div>
+  <div class="form-control">
+    <form class="card dark">
+      <input type="search" class="hotdog" placeholder="Search">
+    </form>
+  </div>
+  <div class="form-control">
+    <form class="hotdog">
+      <span>&equiv;</span>
+      <input type="search" placeholder="Search">
+    </form>
+	</div>
+  <div class="form-control">
+    <form class="hotdog">
+      <input type="search" placeholder="Search">
+	  <span>&equiv;</span>
+    </form>
+	</div>
+</div>
+
+<h2 id="select">Select</h2>
+<div class="card soft">
+  <div class="form-select">
+    <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+  </div>
+  
+  <div class="display-flex">
+    <div class="flex-stretch"></div>
+    <div class="flex-none">
+      <div class="form-select">
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="checkboxes">Check Boxes</h2>
+  <h3>Basic Checkbox</h3>
+<div class="card soft">
+  <label>Label<input type="checkbox" id="input-1"></label>
+    <label for="input-1"> Label</label>
+
+  <h3>Heart Checkbox</h3>
+  <div class="favorite">
+    <input type="checkbox" id="heart-example" class="hidden">
+    <label for="heart-example">&hearts;</label>
+  </div>
+
+<h3>Toggle</h3>
+
+<div class="toggle">
+  <input type="checkbox" id="toggle-1" class="hidden">
+  <label for="toggle-1"></label>
+</div>
+
+<div class="display-flex flex-align-center">
+  <div class="flex-stretch">
+    <label for="toggle-2" class="form-label">Display Warning?</label>
+  </div>
+  <div class="flex-none">
+    <div class="toggle" style="font-size: 2em">
+      <input type="checkbox" id="toggle-2" class="hidden">
+      <label for="toggle-2"></label>
+    </div>
+  </div>
+</div>
 
   <body>
 </html>
