@@ -160,7 +160,7 @@ ul {
 }
 
 .nav a:hover {
-	background-color: var(--color-sub-medium);
+	background-color: var(--color-neutral-dark);
 	color: var(--color-white);
 	text-decoration: none;
 }
@@ -216,7 +216,7 @@ ul {
 	color:inherit;
 }
 .nav-material a:hover {
-  background-color: var(--color-sub-light);
+  background-color: var(--color-sub-medium);
   color: inherit;
 }
 
@@ -505,5 +505,4 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: "futura-pt", sans-serif;
-  background-color: var(--color-main-light);
 }
