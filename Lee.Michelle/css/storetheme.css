@@ -274,3 +274,160 @@ body{
   appearance: none;
    outline: none;  
 }
+
+.product-section .card.soft {
+  padding: 3rem 4rem;
+  border-radius: 8px;
+}
+
+.product-section .product-content {
+  display: flex;
+  flex-direction: row; /* image left, text right */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  min-height: 450px;
+  box-sizing: border-box;
+}
+
+/* product image */
+.product-section .product-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.product-section .product-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* text */
+.product-section .product-text {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  line-height: 1.8;
+}
+
+.product-section .product-text .name {
+  font-family: "kepler-std", serif; 
+  font-size: 2.4rem;                
+  font-weight: 900;               
+  letter-spacing: 0.02em;          
+  color: var(--color-black);
+  margin-bottom: 0.3rem;
+  line-height: 1.1;              
+}
+
+/* Product Price (H2) */
+.product-section .product-text .price {
+  font-family: "kepler-std", serif; 
+  font-size: 1.8rem;                
+  font-weight: 700;                
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.product-section .product-text p {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: v;
+}
+
+.product-section .product-text .price {
+  font-size: 1.rem;
+  font-weight: bold;
+  color: var(--color-black);
+  margin-bottom: rem;
+
+}
+
+/* ACTIONS ROW */
+.product-section .product-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  padding: 0;           
+  margin-top: 4rem;    
+}
+
+/* HEART ICON */
+.product-section .favorite label {
+  font-size: 1.8em;
+  color: var(--color-neutral-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.product-section .favorite input:checked + label {
+  color: red;
+  transform: scale(1.2);
+}
+
+/* DROPDOWN SELECTOR */
+.product-section .form-select select {
+  padding: 1em 1.2em;
+  border-radius: 0.4em;
+  background-color: var(--color-neutral-light);
+  font-family: "futura-pt", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.product-section .product-text .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-black);
+  margin-bottom: 3rem; 
+}
+
+/* RESPONSIVE (mobile) */
+@media (max-width: 900px) {
+  .product-section .product-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-section .product-image img {
+    max-width: 400px;
+  }
+
+  .product-section .product-actions {
+    justify-content: center;
+  }
+}
+
+.back-button-container {
+  text-align: left;
+  margin: 2rem 0 1rem;
+}
+
+.back-button-container .back-button {
+  display: inline-block;
+  background-color: var(--color-sub-dark);
+  color: var(--color-white);
+  font-size: 1rem;
+  padding: 0.6em 1.5em;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "futura-pt", sans-serif;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button-container .back-button:hover {
+  background-color: var(--color-sub-medium);
+  transform: scale(1.05);
+}
+
+.back-button-container .back-button:active {
+  background-color: var(--color-sub-light);
+  transform: scale(0.98);

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pearlesque Jewelry</title>
+ <?php include "parts/meta.php" ?>
+
+</head>
+<body>
+
+  <?php include "parts/navbar.php" ?>
+
+<div class= "view-window" style="background-image:url('img/bg3.jpg')"></div>
+
+<div class="section-background"></div>
+<div class="container" >
+  <div class="card soft">
+    <h1>Our Mission</h1>
+    <p>Pearlesque Jewelry was founded with a vision to showcase the natural elegance and individuality of pearls. Our designers craft each piece with care and creativity, transforming this organic gem into modern expressions of beauty.
+
+We are a jewelry brand devoted to authenticity, quality, and thoughtful design. Every creation reflects our belief that jewelry should not only enhance your style, but also capture your personality. At Pearlesque, we believe every pearl becomes part of your story the moment you wear it.</p>
+</div>
+
+
+<div class="container brand-section">
+  <div class="card soft">
+    <div class="brand-content">
+      <div class="brand-text">
+        <h1 class="name">Our Brand</h1>
+        <p>
+          Pearlesque Jewelry was created to celebrate the natural beauty and individuality of pearls. 
+          Our designs combine craftsmanship and creativity to bring out the unique character of every piece.
+        </p>
+        <p>
+          We are a contemporary jewelry brand that values authenticity, quality, and self-expression. 
+          Each design is thoughtfully made to highlight the pearl’s natural radiance and complement every style. 
+          At Pearlesque, we believe every piece tells a story.
+        </p>
+      </div>
+
+      <div class="brand-image">
+        <img class="bg_image" src="img/bg4.jpg" alt="Pearlesque store interior">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container card soft" id="gridsystem">
+  <h1 class="product-title">Check Our Products</h1>
+
+<div class="grid gap xs-small md-medium">
+  <div class="col-xs-12 col-md-4">
+      <img src="img/earring2.jpg" alt="" class="product-image">
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <img src="img/ring2.jpg" alt="" class="product-image">
+  </div>
+  <div class="col-xs-12 col-md-4">
+     <img src="img/necklace2.jpg" alt="" class="product-image">
+  </div>
+</div>
+
+<div class="pill-button-container">
+  <a href="products.html" class="pill-button">Browse more products</a>
+  </div>
+  </div>
+</div>
+</main>
+
+
+<script>
+    const makeNav = (classes='') => {
+      const links =  ['Home','About','Products','Cart'];
+      let ran = Math.floor(Math.random()*links.length);
+      document.write(`
+      <div>
+          <nav class="${classes}">
+            <ul>
+            ${links.reduce((r,o,i)=>{
+              return r+`<li class=${ran==i?'active':''}><a href="#">${o}</a></li>`;
+              },'')}
+               
+            </ul>
+          </nav>
+        </div>
+      `);
+    }
+  </script>
+
+  <script>
+$(".nav #tableofcontents .nav) a").on("click", function(e){
+    e.preventDefault();
+    $(this).closest("li").addClass("active")
+      .siblings().removeClass("active");
+  })
+</script>
+
+    <footer><p>WNM 608 - Michelle Lee</p></footer>
+     
+</body>
+</html>
