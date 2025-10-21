@@ -37,7 +37,7 @@
                      <h2>Pearl Earrings #2</h1>
                   <figcaption>
                     <div class="price-row">
-                      <div class="price"><h2>$100.00</h2></div>
+                      <div class="price"><h2>$120.00</h2></div>
                       <div class="display-flex">
                           <div class="favorite">
                           <input type="checkbox" id="heart-{$p['id']}" class="hidden">
