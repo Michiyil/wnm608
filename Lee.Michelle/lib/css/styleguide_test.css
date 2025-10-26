@@ -1,29 +1,34 @@
 
 /*CSS RESET */
 
-*{
-	box-sizing:border-box;
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "futura-pt", sans-serif;
+  font-size: 120%;
+  font-weight: 300;
 }
 
 :root {
-	--color-neutral-light:#FBFAFB;
-	--color-neutral-medium:#B5ACAF;
-	--color-neutral-dark:#645557;
+  --color-neutral-light:#FBFAFB;
+  --color-neutral-medium:#B5ACAF;
+  --color-neutral-dark:#645557;
 
-	--color-main-light:#F9F2EB;
-	--color-main-medium:#e1d6c8;
-	--color-main-dark:#a99f94;
-	
-	--color-sub-light:#F3E8E5;
-	--color-sub-medium:#c5b2b1;
-	--color-sub-dark:#8d7676;
+  --color-main-light:#F9F2EB;
+  --color-main-medium:#e1d6c8;
+  --color-main-dark:#a99f94;
+  
+  --color-sub-light:#F3E8E5;
+  --color-sub-medium:#c5b2b1;
+  --color-sub-dark:#8d7676;
 
 
-	--color-black:#555;
-	--color-white:#fff;
+  --color-black:#555;
+  --color-white:#fff;
 
-	--header-height:3rem; 
-	--spacing:1rem;
+  --header-height:3rem; 
+  --spacing:1rem;
 }
 
 .section-background {
@@ -34,10 +39,10 @@
 
 nav,
 body{
-	margin:0;
-	font-size:120%;
-	font-family: "futura-pt", sans-serif;
-	font-weight: 300;
+  margin:0;
+  font-size:120%;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 300;
 }
 
 h1,
@@ -56,7 +61,7 @@ h6 {  font-family: "kepler-std", serif;
 }
 
 h1{
-	font-family: "kepler-std-extended-subhead", serif;
+  font-family: "kepler-std-extended-subhead", serif;
 font-weight: 700;
 font-style: normal;
 }
@@ -74,21 +79,21 @@ font-style: normal;
 }
 
 h4{
-	font-family: "kepler-std", serif;
-	font-weight: 800;
-	font-style: normal;
+  font-family: "kepler-std", serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 h5{
-	font-family: "kepler-std", serif;
-	font-weight: 800;
-	font-style: normal;
+  font-family: "kepler-std", serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 h6{
-	font-family: "kepler-std", serif;
-	font-weight: 500;
-	font-style: normal;
+  font-family: "kepler-std", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 p {
@@ -98,13 +103,13 @@ p {
 }
 
 a {
-	color:inherit;
-	font-weight:bold;
-	text-decoration:none;
+  color:inherit;
+  font-weight:bold;
+  text-decoration:none;
 }
 a:hover {
-	text-decoration: underline;
-	background-color: var ();
+  text-decoration: underline;
+  background-color: var ();
 }
 
 ul {
@@ -116,9 +121,9 @@ ul {
 /*LAYOUT CLASSES */
 
 .container {
-	max-width: 1200px;
-	margin-right: auto;
-	margin-left: auto;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
@@ -137,9 +142,9 @@ ul {
 
 /* Small Classes */
 .media-image {
-	max-width: 100%;
-	vertical-align: text-bottom;
-	
+  max-width: 100%;
+  vertical-align: text-bottom;
+  
 }
 
 .hidden { display: none;}
@@ -148,27 +153,27 @@ ul {
 /* Component Classes */
 
 .nav ul {
-	list-style-type:none;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	padding-left: 0;
+  list-style-type:none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 0;
 }
 
 .nav a{
-	display:block;
-	padding: 0.2em 0.5em;
+  display:block;
+  padding: 0.2em 0.5em;
 }
 
 .nav a:hover {
-	background-color: var(--color-neutral-dark);
-	color: var(--color-white);
-	text-decoration: none;
+  background-color: var(--color-neutral-dark);
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .nav .active a {
-	background-color: var(--color-neutral-dark);
-	color:white;
-	text-decoration: none;
+  background-color: var(--color-neutral-dark);
+  color:white;
+  text-decoration: none;
 }
 
 
@@ -177,43 +182,43 @@ ul {
 .nav-pills ul,
 .nav-stretch ul,
 .nav-flex ul {
-	display: flex;
+  display: flex;
 }
 
 .nav-material li,
 .nav-stretch li {
-	flex: 1 1 auto;
-	text-align: center;
+  flex: 1 1 auto;
+  text-align: center;
 }
 
 .nav-pills a {
-	border-radius: 2em;
-	padding: 0.5em 1em;
+  border-radius: 2em;
+  padding: 0.5em 1em;
 }
 
 .nav-crumbs a {
-	display: inline-block;
+  display: inline-block;
 }
 
 .nav-crumbs .active a,
 .nav-crumbs a:hover {
-	background-color:transparent;
-	color:inherit;
-	text-decoration: underline;
+  background-color:transparent;
+  color:inherit;
+  text-decoration: underline;
 }
 
 .nav-crumbs li:not(:first-child)::before {
-	content:'/';
+  content:'/';
 }
 
 .nav-material a {
-	padding: 0.5em 1em;
-	position: relative;
+  padding: 0.5em 1em;
+  position: relative;
 }
 
 .nav-material .active a {
-	background-color: transparent;
-	color:inherit;
+  background-color: transparent;
+  color:inherit;
 }
 .nav-material a:hover {
   background-color: var(--color-sub-medium);
@@ -237,9 +242,9 @@ ul {
 
 
 .navbar {
-	background-color: #af997f;
-	color: var(--color-white);
-	line-height: var(--header-height);
+  background-color: #af997f;
+  color: var(--color-white);
+  line-height: var(--header-height);
 }
 
 .navbar h1 {
@@ -250,51 +255,51 @@ ul {
 }
 
 .navbar a{
-	padding: 0 0.5em;
+  padding: 0 0.5em;
 }
 
 
 /* Card */
 
 .card {
-	background-color: var(--color-white);
-	box-shadow: 0 0 10px rgba(0,0,0,0.1);
-	margin-top: 0.75em;
-	margin-bottom: 0.75em;
-	padding: 1.75em;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  padding: 1.75em;
 
-	overflow: hidden;
-	position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
-	.card.soft{
-		border-radius: 0.3em;
-		box-shadow: 0 0 10px rgba(0,0,0,0.1);
-	}
+  .card.soft{
+    border-radius: 0.3em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
 
-	.card.hard {
-		border-radius: 0.3em;
-		border:2px solid var(--color-neutral-medium);
-		padding: 1em;
-	}
-
-
-	.card.dark {
-		background-color: var(--color-neutral-dark);
-		color:var(--color-neutral-light);
-		padding: 1em;
-	}
+  .card.hard {
+    border-radius: 0.3em;
+    border:2px solid var(--color-neutral-medium);
+    padding: 1em;
+  }
 
 
-	.card.medium {
-		background-color: var(--color-neutral-medium);
-	}
+  .card.dark {
+    background-color: var(--color-neutral-dark);
+    color:var(--color-neutral-light);
+    padding: 1em;
+  }
 
-	.card.flat {
-		padding:0;
-	}
 
-	
+  .card.medium {
+    background-color: var(--color-neutral-medium);
+  }
+
+  .card.flat {
+    padding:0;
+  }
+
+  
 .view-window {
   height: 50vh;
   position: relative;
@@ -333,26 +338,26 @@ ul {
 
 
 
-	/* Figure */
-	.figure {
-		margin: 0;
-		background-color: var(--color-white);
-	}
+  /* Figure */
+  .figure {
+    margin: 0;
+    background-color: var(--color-white);
+  }
 
-	.figure img {
-		width: 100%;
-		vertical-align: text-bottom;
-		pointer-events: none; 
-		user-select: none;
-	}
+  .figure img {
+    width: 100%;
+    vertical-align: text-bottom;
+    pointer-events: none; 
+    user-select: none;
+  }
 
-	.figure figcaption {
-		padding: 1em;
-	}
+  .figure figcaption {
+    padding: 1em;
+  }
 
 /* FORMS */
 .form-control {
-	margin:1em 0;
+  margin:1em 0;
 }
 
 .form-select>select,
@@ -361,15 +366,15 @@ ul {
 .form-button,
 .form-input,
 .form-item {
-	display: inline-block;
-	background-color:transparent;
-	border-width: 0;
-	padding: 0.5em 1em;
-	font: inherit;
-	-webkit-appearance: none;
-	color: inherit;
-	width: 100%;
-	outline: 0;
+  display: inline-block;
+  background-color:transparent;
+  border-width: 0;
+  padding: 0.5em 1em;
+  font: inherit;
+  -webkit-appearance: none;
+  color: inherit;
+  width: 100%;
+  outline: 0;
 }
 
 .date-field {
@@ -394,32 +399,32 @@ ul {
 }
 
 .form-input:focus {
-	border-bottom-color: var(--color-neutral-dark);
+  border-bottom-color: var(--color-neutral-dark);
 }
 
 .form-label {
-	font-size: 0.8em;
-	color: var(--color-neutral-dark);
-	display: block;
-	width: 100%;
+  font-size: 0.8em;
+  color: var(--color-neutral-dark);
+  display: block;
+  width: 100%;
 }
 
 .form-button {
-	background-color: var(--color-neutral-light);
-	border-radius: 0.2em;
-	padding: 0.5em 1em;
-	cursor:pointer;
-	text-align: center;
+  background-color: var(--color-neutral-light);
+  border-radius: 0.2em;
+  padding: 0.5em 1em;
+  cursor:pointer;
+  text-align: center;
 }
 
 .form-button:hover {
-	text-decoration: none;
-	background-color: var(--color-main-light);
+  text-decoration: none;
+  background-color: var(--color-main-light);
 }
 
 
 .form-button:active {
-	background-color: var(--color-main-light);
+  background-color: var(--color-main-light);
 }
 
 .hotdog {
@@ -431,13 +436,13 @@ ul {
 }
 
 .hotdog.dark {
-	background-color:  var(--color-neutral-dark);
-	color: var(--color-neutral-light)
+  background-color:  var(--color-neutral-dark);
+  color: var(--color-neutral-light)
 }
 
 .hotdog.light {
-	background-color:  var(--color-neutral-light);
-	color: var(--color-neutral-dark)
+  background-color:  var(--color-neutral-light);
+  color: var(--color-neutral-dark)
 }
 
 .form-select > select {
@@ -487,7 +492,7 @@ font-family: "futura-pt", sans-serif;
 }
 
 .toggle input:checked + label::after {
-	transform:translateX(1em);
+  transform:translateX(1em);
 }
 
 /* Buttons */

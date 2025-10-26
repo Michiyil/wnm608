@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Michelle Lee",
+    "type": "Student",
+    "email": "yes@gmail.com",
+      "phone": "555-777-8888",
+    "classes": [608, 617, 620]
+  },
+  {
+    "name": "Lei Wong",
+    "type": "Worker",
+    "email": "LeiW@gmail.com",
+      "phone": "555-777-8888",
+    "classes": [608, 617, 620]
+  },
+  {
+    "name": "Xander Cowell",
+    "type": "Worker",
+    "email": "XanderC@gmail.com",
+      "phone": "555-777-8888",
+    "classes": [608, 617, 620]
+  },
+  {
+    "name": "Susi Lona",
+    "type": "Worker",
+   "email": "susil@gmail.com",
+  "phone": "555-777-8888",
+    "classes": [608, 617, 620]
+  }
+]
