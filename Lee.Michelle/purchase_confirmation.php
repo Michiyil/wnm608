@@ -18,7 +18,7 @@
 </div>
 </div>
   <div class="pill-button-container">
-          <a href="product_list.php" class="pill-button">Go back to Products</a>
+          <a href="product_list.php" class="pill-button">Continue Shopping</a>
         </div>
       </div>
   </body>

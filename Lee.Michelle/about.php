@@ -62,7 +62,7 @@ We are a jewelry brand devoted to authenticity, quality, and thoughtful design. 
 </div>
 
 <div class="pill-button-container">
-  <a href="products.html" class="pill-button">Browse more products</a>
+  <a href="product_list.php" class="pill-button">Browse more products</a>
   </div>
   </div>
 </div>

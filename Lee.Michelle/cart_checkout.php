@@ -16,40 +16,77 @@
     <a href="cart_review.php" class="pill-button back-button">← Go Back to Cart</a>
   </div>
 
-  <div class="card soft">
-        <h1>Checkout</h1>
-        <?php
-      // Example cart items — you could replace this with dynamic data later
-      $cart_items = [
-        ["id" => 1, "name" => "Pearl Earrings #1", "price" => 100.00],
-        ["id" => 2, "name" => "Pearl Earrings #2", "price" => 120.00]
-      ];
+   <div class="container">
+    <div class="card soft">
+ <h1>Checkout</h1>
 
-      foreach ($cart_items as $i => $p): 
-      ?>
-        <h2><?= htmlspecialchars($p['name']) ?></h2>
-        <figcaption>
-          <div class="price-row">
-            <div class="price"><h2>$<?= number_format($p['price'], 2) ?></h2></div>
-            <div class="display-flex">
-              <div class="favorite">
-                <input type="checkbox" id="heart-<?= $p['id'] ?>" class="hidden">
-                <label for="heart-<?= $p['id'] ?>">&hearts;</label>
-              </div>
-              <div class="form-select">
-                <select>
-                  <option>1</option><option>2</option>
-                  <option>3</option><option>4</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </figcaption>
-      <?php endforeach; ?>
+  <form class="form">
+  <h2>Address</h2>
+  <div class="form-control">
+    <label for="address-street" class="form-label">Street</label>
+    <input id="address-street" type="text" placeholder="Street name" class="form-input">
+  </div>
+
+  <div class="form-control">
+    <div class="grid gap">
+      <div class="col-xs-12 col-md-6">
+        <label for="address-city" class="form-label">City</label>
+        <input id="address-city" type="text" placeholder="City" class="form-input">
       </div>
-   <h2>Subtotal: $220.00</h2>
-   <h2>Tax: $10.00</h2>
-   <h1>Total: $230.00</h1>
+      <div class="col-xs-12 col-md-6">
+        <label for="address-state" class="form-label">State</label>
+        <input id="address-state" type="text" placeholder="State" class="form-input">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-control">
+    <div class="grid gap">
+      <div class="col-xs-12 col-md-6">
+        <label for="address-zip" class="form-label">Zip Code</label>
+        <input id="address-zip" type="text" placeholder="Zip Code" class="form-input">
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <label for="address-country" class="form-label">Country</label>
+        <input id="address-country" type="text" placeholder="Country" class="form-input">
+      </div>
+    </div>
+  </div>
+</form>
+
+  <form class="form">
+  <h2>Payment</h2>
+<form class="form">
+
+  <div class="form-control">
+    <label for="payment-name" class="form-label">Full Name</label>
+    <input id="payment-name" type="text" placeholder="Name" class="form-input">
+  </div>
+
+  <div class="form-control">
+    <label for="payment-number" class="form-label">Card Number</label>
+    <input id="payment-number" type="text" placeholder="####-####-####-####" class="form-input">
+  </div>
+
+  <div class="form-control">
+    <div class="grid gap">
+      <div class="col-xs-12 col-md-6">
+        <label for="payment-expiration" class="form-label">Expiration</label>
+        <input id="payment-expiration" type="text" placeholder="MM-YY" class="form-input">
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <label for="payment-cvv" class="form-label">CVV</label>
+        <input id="payment-cvv" type="text" placeholder="CVV" class="form-input">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-control">
+    <label for="payment-zip" class="form-label">Zip Code</label>
+    <input id="payment-zip" type="text" placeholder="Zip Code" class="form-input">
+  </div>
+
+</form>
 
   </body>
         <div class="pill-button-container">
