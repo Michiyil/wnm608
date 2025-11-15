@@ -8,7 +8,10 @@ $product = makeQuery(
   makeConn(),
   "SELECT * FROM `products` WHERE `id` = $id"
 )[0];
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,26 +53,30 @@ $product = makeQuery(
               <label for="heart-<?= $id ?>">&hearts;</label>
             </div>
 
-            <!-- QUANTITY SELECT -->
-            <div class="form-select">
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-              </select>
-            </div>
 
-      
-            <a href="product_added_to_cart.php?id=<?= $product->id ?>" class="pill-button add-to-cart">
-              Add to cart
-            </a>
-          </div>
+<form method="post" action="cart_actions.php?action=add-to-cart&id=<?= $product->id ?>">
 
-        </div>
+  <input type="hidden" name="product-id" value="<?= $product->id ?>">
+
+  <div class="card-section">
+
+    <div class="form-control">
+      <label for="product-amount" class="form-label">Amount</label>
+      <div class="form-select">
+        <select id="product-amount" name="product-amount">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
       </div>
     </div>
-  </div>
+    </div>
+  <input type="submit" class="pill-button add-to-cart" value="Add To Cart">
+</form>
+</div>
+</div> 
+
 
 </body>
 </html>

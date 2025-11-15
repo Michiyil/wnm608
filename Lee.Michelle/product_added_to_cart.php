@@ -1,15 +1,14 @@
 <?php
-session_start();
 include_once "lib/php/functions.php";
 
 $id = $_GET['id'] ?? 0;
 
-// Add product ID to cart
-if (!isset($_SESSION['cart'])) $_SESSION['cart'] = [];
-$_SESSION['cart'][] = $id;
 
 // Get the product info
-$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=$id")[0];
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+$cart_product = cartItemById($_GET['id']);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,11 +26,11 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=$id")[0];
       </div>
 
       <div class="card soft">
-         <h2>You added <?= $product->name ?> to your cart!</h2>
+         <h2>You have now a total amount <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</h2>
       </div>
 
       <div class="pill-button-container">
-         <a href="product_cart.php" class="pill-button add-to-cart">Go to Cart</a>
+         <a href="cart.php" class="pill-button add-to-cart">Go to Cart</a>
       </div>
    </div>
 </body>

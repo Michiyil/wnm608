@@ -1,4 +1,10 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -25,11 +31,9 @@
     <div class="container display-flex flex-align-center">
       <div class="grid gap">
 
-        <?php
-        include_once "lib/php/functions.php";
-        include_once "parts/templates.php";
 
-     // Query Database
+ <?php
+
         $result = makeQuery(
           makeConn(),
           "

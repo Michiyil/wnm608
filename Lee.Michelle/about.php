@@ -1,3 +1,8 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,11 +63,6 @@ We are a jewelry brand devoted to authenticity, quality, and thoughtful design. 
   </div>
   <div class="col-xs-12 col-md-4">
      <img src="img/necklace2.jpg" alt="" class="product-image">
-  </div>
-</div>
-
-<div class="pill-button-container">
-  <a href="product_list.php" class="pill-button">Browse more products</a>
   </div>
   </div>
 </div>

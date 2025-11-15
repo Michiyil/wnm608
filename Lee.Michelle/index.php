@@ -1,3 +1,8 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +19,9 @@
     <div class="view-window-content">
       <h1 class="headline">Timeless Elegance</h1>
       <p class="subheadline">Pearl jewelry crafted to shine with your story.</p>
-      <div class="pill-button-container">
-        <a href="products.html" class="pill-button">Shop The Collection</a>
-      </div>
+    <div class="pill-button-container">
+          <a href="product_list.php" class="pill-button">Shop the Collection</a>
+        </div>
     </div>
   </div>
 </main>
@@ -27,7 +32,7 @@
         <h1>About Us</h1>
         <p>At Pearlesque Jewelry, we specialize in handcrafted pearl jewelry that embodies timeless beauty and individuality. Each piece is carefully made using high-quality materials and years of expertise in jewelry design. Our passion is transforming natural pearls into elegant, one-of-a-kind creations that reflect craftsmanship, sophistication, and personal style.</p>
         <div class="pill-button-container">
-          <a href="about.html" class="pill-button">Click to learn more</a>
+          <a href="about.php" class="pill-button">Click to learn more</a>
         </div>
       </div>
 
@@ -45,7 +50,7 @@
           </div>
         </div>
         <div class="pill-button-container">
-          <a href="products.html" class="pill-button">Browse more products</a>
+          <a href="product_list.php" class="pill-button">Browse more products</a>
         </div>
       </div>
     </div>

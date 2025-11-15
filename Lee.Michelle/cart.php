@@ -2,20 +2,10 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-$cart = makeQuery(
-  makeConn(),
-  "SELECT * FROM `products` WHERE `id` IN (5,7,10)"
-);
-?>
-<!DOCTYPE html>
-<?php
-include_once "lib/php/functions.php";
 
-$cart = makeQuery(
-  makeConn(),
-  "SELECT * FROM `products` WHERE `id` IN (5,7,10)"
-);
+$cart_items = getCartItems();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,35 +17,28 @@ $cart = makeQuery(
 
   <?php include "parts/navbar.php"; ?>
 
-<div class="container">
-  <h2>In Your Cart</h2>
-  <div class="grid gap">
+  <div class="container">
 
-    <div class="col-xs-12 col-md-7">
-      <div class="card soft">
-     <?= array_reduce($cart, 'cartListTemplate') ?>
-      </div>
+    <!-- Back Button -->
+    <div class="back-button-container">
+      <a href="product_list.php" class="pill-button back-button">← Go back to Products</a>
     </div>
 
-    <div class="col-xs-12 col-md-5">
-      <div class="card soft flat">
-        <div class="card-section display-flex">
-          <div class="flex-stretch"><h2>Sub Total</strong></div>
-          <div class="flex-none">&dollar;3.50</div>
-        </div>
-        <div class="card-section display-flex">
-          <div class="flex-stretch"><strong>Taxes</strong></div>
-          <div class="flex-none">&dollar;3.50</div>
-        </div>
-        <div class="card-section display-flex">
-          <div class="flex-stretch"><strong>Total</strong></div>
-          <div class="flex-none">&dollar;7.00</div>
-        </div>
+    <!-- Cart Review Section -->
+    <div class="card soft cart-review">
+      <h1>Cart Review</h1>
+
+      <!-- Dynamic cart listing -->
+      <div class="cart-items">
+        <?= array_reduce($cart_items,'cartListTemplate') ?>
       </div>
     </div>
+<?= cartTotals() ?>
+
+ 
 
   </div>
-</div>
 
 </body>
 </html>
+
