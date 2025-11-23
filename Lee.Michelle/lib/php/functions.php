@@ -13,7 +13,8 @@ function file_get_json($filename) {
 }
 
 
-include "auth.php";
+include __DIR__ . "/auth.php";
+
 
 function makeConn() {
   [$host, $user, $pass, $database] = MYSQLIAuth();

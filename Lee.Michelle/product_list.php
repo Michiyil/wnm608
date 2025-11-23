@@ -1,8 +1,8 @@
 <?php
-
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -10,6 +10,18 @@ include_once "parts/templates.php";
   <meta charset="UTF-8">
   <title>Pearlesque Jewelry</title>
   <?php include "parts/meta.php"; ?>
+
+  <script src="lib/js/function.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/ProductCard.js"></script>
+<script>
+query({ type: 'products_all' }).then(d => {
+  $(".ProductCard").html(
+    templater(makeProductCard)(d.result)
+  );
+});
+</script>
+
 </head>
 <body>
 
@@ -22,17 +34,46 @@ include_once "parts/templates.php";
   <div class="form-control">
     <div class="container card soft">
       <h1>Our Products</h1>
-      <form class="hotdog">
+      <form class="hotdog" id="product-search">
         <span>&equiv;</span>
-        <input type="search" placeholder="Search">
+        <input type="search" placeholder="Search Products">
       </form>
     </div>
 
-    <div class="container display-flex flex-align-center">
-      <div class="grid gap">
+  <section class="container card soft">
+  <div class="form-control display-flex">
+    <div class="flex-stretch display-flex">
+      <div class="flex-none">
+        <button data-filter="category" data-value="" type="button" class="form-button">All</button>
+      </div>
+      <div class="flex-none">
+        <button data-filter="category" data-value="necklace" type="button" class="form-button">Necklace</button>
+      </div>
+      <div class="flex-none">
+        <button data-filter="category" data-value="ring" type="button" class="form-button">Ring</button>
+      </div>
+      <div class="flex-none">
+        <button data-filter="category" data-value="earrings" type="button" class="form-button">Earrings</button>
+      </div>
+    </div>
 
+    <div class="flex-none">
+     <div class="form-select">
+      <select class="js-sort">
+          <option value="1">Newest</option>
+          <option value="2">Oldest</option>
+          <option value="3">Least Expensive</option>
+          <option value="4">Most Expensive</option>>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
 
- <?php
+<section class="container">
+  <div class="ProductCard grid gap"></div>
+</section>
+<!--  <?php
 
         $result = makeQuery(
           makeConn(),
@@ -43,10 +84,9 @@ include_once "parts/templates.php";
           LIMIT 12
           "
         );
-
         // Output Products
         echo array_reduce($result, function($r, $o){ return $r . makeProductCard($o); });
-        ?>
+        ?> -->
 
       </div>
     </div>

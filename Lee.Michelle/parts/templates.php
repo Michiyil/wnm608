@@ -1,5 +1,4 @@
 <?php
-
 function makeProductCard($p) {
     return <<<HTML
     <div class="col-xs-12 col-md-4">
