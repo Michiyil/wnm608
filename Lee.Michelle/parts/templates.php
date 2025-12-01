@@ -42,6 +42,28 @@ function makeProductCard($p) {
     HTML;
 }
 
+function makeProducts($p) {
+    return <<<HTML
+    <div class="col-xs-12 col-md-4">
+        <figure class="figure">
+            <div class="container">
+                <a href="product_item.php?id={$p->id}">
+                    <img src="img/{$p->images}" alt="{$p->name}" class="product-image">
+                </a>
+                <figcaption>
+                    <div class="product-name">{$p->name}</div>
+                    <div class="price-row">
+                        <div class="price">&dollar;{$p->price}</div>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+    </div>
+HTML;
+}
+
+
+
 function selectAmount($amount=1, $total=4) {
     $output = "<select name='amount'>";
     for($i=1; $i<=$total; $i++) {
@@ -112,6 +134,13 @@ return <<<HTML
     </div>
 HTML;
 }
+
+function recommendedProductsImages($a) {
+    $product = array_reduce($a, function($r, $p) {
+        return $r . makeProducts($p);
+    }, "");
+    return "<div class='grid gap productlist'>$product</div>";
+}
 ?>
 
 <script>
@@ -122,3 +151,6 @@ function addToCartWithAmount(event, productId) {
     window.location.href = `cart_actions.php?action=add-to-cart&id=${productId}&amount=${amount}`;
 }
 </script>
+
+
+

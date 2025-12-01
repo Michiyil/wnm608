@@ -52,23 +52,48 @@ We are a jewelry brand devoted to authenticity, quality, and thoughtful design. 
 
 
   <div class="container card soft" id="gridsystem">
-  <h1 class="product-title">Check Our Products</h1>
-
-<div class="grid gap xs-small md-medium">
-  <div class="col-xs-12 col-md-4">
-      <img src="img/earring2.jpg" alt="" class="product-image">
-  </div>
-  <div class="col-xs-12 col-md-4">
-    <img src="img/ring2.jpg" alt="" class="product-image">
-  </div>
-  <div class="col-xs-12 col-md-4">
-     <img src="img/necklace2.jpg" alt="" class="product-image">
-  </div>
-  </div>
-</div>
-</main>
-
-
+      <h1>Check Our Products</h1>
+      <div class="grid gap">
+        <div class="col-xs-12 col-md-4">
+          <figure class="figure product-overlay">
+            <img src="img/ring4.jpg" alt="" class="product-image">
+            <figcaption>
+              <div class="caption-body">
+                <div>Black Pearl Ring</div>
+                <div>$200.00</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <figure class="figure product-overlay">
+            <img src="img/necklace2.jpg" alt="" class="product-image">
+            <figcaption>
+              <div class="caption-body">
+                <div>Pearl Necklace #2</div>
+                <div>$175.00</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <figure class="figure product-overlay">
+            <img src="img/earring3.jpg" alt="" class="product-image">
+            <figcaption>
+              <div class="caption-body">
+                <div>Pink Pearl Earrings</div>
+                <div>$135.00</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+          <div class="pill-button-container">
+          <a href="products.html" class="pill-button">Browse more products</a>
+        </div>
+    </div>
+ </div>
+ 
 <script>
     const makeNav = (classes='') => {
       const links =  ['Home','About','Products','Cart'];

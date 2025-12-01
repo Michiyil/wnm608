@@ -1,61 +1,42 @@
-<?php
-
-include_once "lib/php/functions.php";
-
+<?php 
+include_once "lib/php/functions.php"; 
+include_once "parts/templates.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Pearlesque Jewelry</title>
- <?php include "parts/meta.php" ?>
-
+    <?php include "parts/meta.php"; ?>
 </head>
-<body>
 
-  <?php include "parts/navbar.php" ?>
+<body class="home">
 
-    <div class="view-window" style="background-image:url('img/storeimage.jpg')">
+<?php include "parts/navbar.php"; ?>
+
+<div class="view-window" style="background-image:url('img/storeimage.jpg')">
     <div class="view-window-content">
-      <h1 class="headline">Timeless Elegance</h1>
-      <p class="subheadline">Pearl jewelry crafted to shine with your story.</p>
-    <div class="pill-button-container">
-          <a href="product_list.php" class="pill-button">Shop the Collection</a>
+        <h1 class="headline">Timeless Elegance</h1>
+        <p class="subheadline">Pearl jewelry crafted to shine with your story.</p>
+        <div class="pill-button-container">
+            <a href="product_list.php" class="pill-button">Scroll Down for More</a>
         </div>
     </div>
-  </div>
-</main>
+</div>
 
-    <div class="section-background"></div>
-    <div class="container">
-      <div class="card soft">
+<div class="section-background"></div>
+
+<div class="container">
+    <div class="card soft">
         <h1>About Us</h1>
-        <p>At Pearlesque Jewelry, we specialize in handcrafted pearl jewelry that embodies timeless beauty and individuality. Each piece is carefully made using high-quality materials and years of expertise in jewelry design. Our passion is transforming natural pearls into elegant, one-of-a-kind creations that reflect craftsmanship, sophistication, and personal style.</p>
+        <p>At Pearlesque Jewelry, we specialize in handcrafted pearl jewelry that embodies timeless beauty and individuality. Each piece is carefully made using high-quality materials and years of expertise in jewelry design.</p>
         <div class="pill-button-container">
-          <a href="about.php" class="pill-button">Click to learn more</a>
+            <a href="about.php" class="pill-button">Click to learn more</a>
         </div>
-      </div>
-
-      <div class="container card soft" id="gridsystem">
-        <h1 class="product-title">Products</h1>
-        <div class="grid gap xs-small md-medium">
-          <div class="col-xs-12 col-md-4">
-            <img src="img/earring2.jpg" alt="" class="product-image">
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <img src="img/ring2.jpg" alt="" class="product-image">
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <img src="img/necklace2.jpg" alt="" class="product-image">
-          </div>
-        </div>
-        <div class="pill-button-container">
-          <a href="product_list.php" class="pill-button">Browse more products</a>
-        </div>
-      </div>
     </div>
+</div>
 
-    <div class="container card soft" id="gridsystem">
+   <div class="container card soft" id="gridsystem">
       <h1>Bestseller Jewelries</h1>
       <p>Our bestselling pearl jewelries embody sophistication and charm loved by customers.</p>
       <div class="grid gap">
@@ -93,51 +74,62 @@ include_once "lib/php/functions.php";
           </figure>
         </div>
       </div>
+          <div class="pill-button-container">
+          <a href="products.html" class="pill-button">Browse more products</a>
+        </div>
     </div>
 
-    <div class="container" id="forms">
-      <div class="card soft">
+<div class="container soft card">
+    <h1>Recommended Products</h1>
+    <?php
+        $result = makeQuery(makeConn(),
+            "SELECT * FROM `products` ORDER BY `date_create` DESC LIMIT 3"
+        );
+        echo recommendedProductsImages($result);
+    ?>
+</div>
+
+<div class="container" id="forms">
+    <div class="card soft">
         <h1>Want to Book an Appointment?</h1>
-        <p>Schedule your appointment with Pearlesque Jewelry. Whether you’re looking for the perfect engagement ring, wedding accessories, or a personalized piece, our specialists are here to help you find something truly special.</p>
 
         <form>
-          <div class="form-control" id="gridsystem">
-            <label class="form-label">Full Name</label>
-            <input type="text" placeholder="First and Last Name" class="form-input">
-          </div>
-          <div class="form-control">
-            <label class="form-label">Phone Number</label>
-            <input type="number" placeholder="(123) - 456 - 7890" class="form-input">
-          </div>
-          <div class="form-control">
-            <label class="form-label">Email</label>
-            <input type="email" placeholder="example@anonymous.com" class="form-input">
-          </div>
-          <div class="form-control">
-            <label class="form-label">Reason</label>
-            <input type="text" placeholder="e.g., Wedding Jewelry, Personalized Piece, Gift Selection" class="form-input">
-          </div>
-          <div class="form-control display-flex flex-align-center" style="display: flex; align-items: center; gap: 10px;">
-            <div class="flex-none">
-              <label class="form-label">Date</label>
+            <div class="form-control">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-input" placeholder="First and Last Name">
             </div>
-            <div>
-              <input type="datetime-local" class="form-input">
+
+            <div class="form-control">
+                <label class="form-label">Phone Number</label>
+                <input type="number" class="form-input" placeholder="(123) - 456 - 7890">
             </div>
-            <span style="font-size: 0.9em; color: #3d3533; white-space: nowrap;">Opening Days - Mon–Sun: 11am–5pm (Closed on holidays)</span>
-          </div>
+
+            <div class="form-control">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="example@anonymous.com">
+            </div>
+
+            <div class="form-control">
+                <label class="form-label">Reason</label>
+                <input type="text" class="form-input" placeholder="e.g., Wedding Jewelry">
+            </div>
+
+            <div class="form-control display-flex" style="gap:10px;">
+                <div class="flex-none"><label class="form-label">Date</label></div>
+                <div><input type="datetime-local" class="form-input"></div>
+                <span style="font-size:0.9em; color:#3d3533;">Mon–Sun: 11am–5pm</span>
+            </div>
         </form>
 
         <div class="pill-button-container">
-          <a href="#" class="pill-button">Book Appointment</a>
+            <a href="#" class="pill-button">Book Appointment</a>
         </div>
-      </div>
     </div>
-  </main>
+</div>
 
-  <footer>
+<footer>
     <p>WNM 608 - Michelle Lee</p>
-  </footer>
-  
+</footer>
+
 </body>
 </html>

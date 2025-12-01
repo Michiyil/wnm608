@@ -15,6 +15,14 @@ function file_get_json($filename) {
 
 include __DIR__ . "/auth.php";
 
+function makePDOConn() {
+    try {
+        $conn = new PDO(...PDOAuth());
+    } catch(PDOException $e) {
+        die($e->getMessage());
+    }
+    return $conn;
+}
 
 function makeConn() {
   [$host, $user, $pass, $database] = MYSQLIAuth();

@@ -549,10 +549,9 @@ body.home .view-window .pill-button-container {
   background-position: center;
   background-attachment: fixed;
 
-
   display: flex;
   justify-content: center; 
-  align-items: center;      
+  align-items: center;
   text-align: center;
   color: white;
 }
@@ -566,6 +565,7 @@ body.home .view-window .pill-button-container {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  pointer-events: none;
 }
 
 .view-window > * {
@@ -573,10 +573,12 @@ body.home .view-window .pill-button-container {
   z-index: 2;
 }
 
-.view-window h1 {
-  margin: 0.3em 0;
+.view-window-content {
+  pointer-events: auto;
 }
-
+.view-window {
+    pointer-events: none;
+}
 .view-window-content .headline {
   font-family: "kepler-std-extended-subhead", serif;
   font-weight: 1000;
@@ -594,8 +596,4 @@ body.home .view-window .pill-button-container {
   margin-bottom: 2em;
   line-height: 1.5;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-}
-
-.pill-button-back-button {
-  padding: 10px 20px; 
 }

@@ -286,9 +286,6 @@ body {
   }
 }
 
-/* ------------------------------
-   PRODUCT PAGE STYLES (scoped)
-   ------------------------------ */
 
 .product-page .pill-button-back-button {
   padding: 10px 20px; 
@@ -447,4 +444,22 @@ span.badge:not(:empty)::after {
 
 span.badge:not(:empty)::before {
     content: '(';
+}
+
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #777;       
+    display: block;
+    margin-bottom: 6px;
+}
+
+
+.product-display strong {
+    font-weight: 700 !important;
+    color: #777;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
 }
